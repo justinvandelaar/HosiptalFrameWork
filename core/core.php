@@ -9,9 +9,13 @@ function openDatabaseConnection()
 	return $db;
 }
 
-
-function render($filename, $data = null)
+/*
+$filename, 
+require(ROOT . 'view/' . $filename . '.php');
+*/
+function render($data = null)
 {
+
 	if ($data) {
 
 		foreach($data as $key => $value) {
@@ -19,7 +23,8 @@ function render($filename, $data = null)
 		}
 	} 
 
+	require(ROOT . 'inc/loadsmarty.php');
+	require(ROOT . 'inc/loadsmarty.php');
 	require(ROOT . 'view/templates/header.php');
-	require(ROOT . 'view/' . $filename . '.php');
 	require(ROOT . 'view/templates/footer.php');
 }

@@ -2,6 +2,7 @@
 
 require(ROOT . "model/StudentModel.php");
 
+// http://localhost/hosiptalframework/student/
 function index()
 {
 	render("student/index", array(
@@ -9,6 +10,7 @@ function index()
 	));
 }
 
+// http://localhost/hosiptalFramework/student/create
 function create()
 {
 	//formulier tonen
