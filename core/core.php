@@ -24,7 +24,6 @@ function render($data = null)
 	} 
 
 	require(ROOT . 'inc/loadsmarty.php');
-	require(ROOT . 'inc/loadsmarty.php');
 	require(ROOT . 'view/templates/header.php');
 	require(ROOT . 'view/templates/footer.php');
 }
