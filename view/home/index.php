@@ -4,7 +4,7 @@
 
   <h1> Welcome to the patient section </h1>
 <ul>
-    <li><a href="create.php"> Create patient </a></li>
+    <li><a href="create"> Create patient </a></li>
 </ul>
 
 <table id="myTable">
@@ -19,18 +19,19 @@
     </tr>
 </thead>
 
-<tbody> 
+<tbody>
+  {foreach $patients as $treaded}
+  {foreach $treaded as $patient} 
   <tr>
-  {foreach $patients as $patient}
-    {$patient|@var_dump}
     <td>{$patient['name']}&nbsp; </td>
     <td>{$patient['species']} &nbsp; </td>
     <td>{$patient['status']} &nbsp; </td>
     <td>{$patient['gender']} &nbsp; </td>
-    <td><a href="edit.php?id={$patient['id']}"> Edit </a></td>
-    <td><a href="delete.php?id={$patient['id']}"> Delete</a></td>
-  {/foreach}
+    <td><a href="edit/?id={$patient['id']}"> Edit </a></td>
+    <td><a href="delete/?id={$patient['id']}"> Delete</a></td>   
   </tr>
+      {/foreach}
+  {/foreach}
   </tbody>
 </table>
 
