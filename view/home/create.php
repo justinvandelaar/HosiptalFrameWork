@@ -4,7 +4,7 @@
 </ul>
 
 <div id="createForm">
-<form action="create.php" method="post">
+<form  method="post">
 	Name: <br>
 	<input type="text" name="name"> <br>
 	Species: <br>
