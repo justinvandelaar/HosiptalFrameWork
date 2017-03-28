@@ -22,8 +22,7 @@ function render($data = null)
 			$$key = $value;
 		}
 	} 
-
-	require(ROOT . 'inc/loadsmarty.php');
+	
 	require(ROOT . 'view/templates/header.php');
 	require(ROOT . 'view/templates/footer.php');
 }
