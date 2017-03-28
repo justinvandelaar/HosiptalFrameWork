@@ -5,6 +5,7 @@
   <h1> Welcome to the patient section </h1>
 <ul>
     <li><a href="create"> Create patient </a></li>
+    <li><a href="../home/index"> Go back </a></li>
 </ul>
 
 <table id="myTable">

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-03-28 15:33:50
+/* Smarty version 3.1.29, created on 2017-03-28 16:20:08
   from "C:\wamp64\www\HosiptalFramework\view\client\index.php" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58da663ea1c1e3_74682295',
+  'unifunc' => 'content_58da7118a63fc7_83510967',
   'file_dependency' => 
   array (
     '073b598cb733841c861babcc01151984fb9de70f' => 
     array (
       0 => 'C:\\wamp64\\www\\HosiptalFramework\\view\\client\\index.php',
-      1 => 1490708028,
+      1 => 1490710806,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58da663ea1c1e3_74682295 ($_smarty_tpl) {
+function content_58da7118a63fc7_83510967 ($_smarty_tpl) {
 echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -33,6 +33,7 @@ echo '<script'; ?>
   <h1> Welcome to the patient section </h1>
 <ul>
     <li><a href="create"> Create patient </a></li>
+    <li><a href="../home/index"> Go back </a></li>
 </ul>
 
 <table id="myTable">
