@@ -38,7 +38,7 @@ function createPatient($name, $species, $status, $gender)
 		));
 
 	$db = null;
-	header("Location:" . URL . "home/index");
+	header("Location:" . URL . "patient/index");
 }
 
 function editPatient($name, $species, $status, $gender, $id) {
@@ -55,7 +55,7 @@ function editPatient($name, $species, $status, $gender, $id) {
 		));
 
 	$db = null;
-	header("Location:" . URL . "home/index");
+	header("Location:" . URL . "patient/index");
 }
 
 function deletePatient($id) 
@@ -70,5 +70,5 @@ function deletePatient($id)
 
 	$db = null;
 	echo "Deleted succesful";
-	header("Location:" . URL . "home/index");
+	header("Location:" . URL . "patient/index");
 }
