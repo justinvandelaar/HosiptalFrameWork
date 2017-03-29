@@ -2,9 +2,9 @@
 <script type="text/javascript" src="../Js/jquery-latest.js"></script>
 <script type="text/javascript" src="../Js/jquery.tablesorter.js"></script>
 
-  <h1> Welcome to the patient section </h1>
+  <h1> Welcome to the Client section </h1>
 <ul>
-    <li><a href="create"> Create patient </a></li>
+    <li><a href="create"> Create Client </a></li>
     <li><a href="../home/index"> Go back </a></li>
 </ul>
 

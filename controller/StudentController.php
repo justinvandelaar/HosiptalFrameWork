@@ -5,9 +5,7 @@ require(ROOT . "model/StudentModel.php");
 // http://localhost/hosiptalframework/student/
 function index()
 {
-	render("student/index", array(
-		'students' => getAllStudents()
-	));
+	render("student/index", array('students' => getAllStudents()));
 }
 
 // http://localhost/hosiptalFramework/student/create

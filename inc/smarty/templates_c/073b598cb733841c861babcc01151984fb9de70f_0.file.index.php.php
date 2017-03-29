@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-03-29 09:11:54
+/* Smarty version 3.1.29, created on 2017-03-29 10:50:14
   from "C:\wamp64\www\HosiptalFramework\view\client\index.php" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58db5e3a60db77_13769242',
+  'unifunc' => 'content_58db75468c21c8_61958049',
   'file_dependency' => 
   array (
     '073b598cb733841c861babcc01151984fb9de70f' => 
     array (
       0 => 'C:\\wamp64\\www\\HosiptalFramework\\view\\client\\index.php',
-      1 => 1490771426,
+      1 => 1490777307,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58db5e3a60db77_13769242 ($_smarty_tpl) {
+function content_58db75468c21c8_61958049 ($_smarty_tpl) {
 echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"><?php echo '</script'; ?>
 >
@@ -30,9 +30,9 @@ echo '<script'; ?>
  type="text/javascript" src="../Js/jquery.tablesorter.js"><?php echo '</script'; ?>
 >
 
-  <h1> Welcome to the patient section </h1>
+  <h1> Welcome to the Client section </h1>
 <ul>
-    <li><a href="create"> Create patient </a></li>
+    <li><a href="create"> Create Client </a></li>
     <li><a href="../home/index"> Go back </a></li>
 </ul>
 
