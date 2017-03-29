@@ -23,7 +23,7 @@ function create() {
 	$age = $_POST['age'];
 	$email = $_POST['email'];
 	$pet_name = $_POST['pet_name'];
-	createClient($name, $adress, $age, $email, $pet_name);
+	createClient($name, $adress, $age, $email, $pet_name, $id);
 	 echo "Created succesful";
 	}
 
@@ -35,16 +35,36 @@ function edit() {
 	require (ROOT . 'inc/loadsmarty.php');
 	$pagetitle = 'Hosiptal';
 	$id = $_GET['id'];
+	$client = getClient($id);
 
-	render($smarty->assign('pagetitle', $pagetitle)
-		);
+	if(isset($_POST['submit'])) {
+		$name = $_POST['name'];
+		$adress = $_POST['adress'];
+		$age = $_POST['age'];
+		$email = $_POST['email'];
+		$pet_name = $_POST['pet_name'];
+		editClient($name, $adress, $age, $email, $pet_name, $id);
+	}
+
+	render($smarty->assign('clients', $client),
+		$smarty->assign('pagetitle', $pagetitle),
+		$smarty->display('client/edit.php'));
 }
 
 function delete() {
 	require (ROOT . 'inc/loadsmarty.php');
 	$id = $_GET['id'];
 	$pagetitle = 'Hosiptal';
+	$client = getClient($id);
 
-	render($smarty->assign('pagetitle', $pagetitle)
-		);
+		if(isset($_POST['yes'])) {
+			deleteClient($id);
+		} elseif (isset($_POST['no'])) {
+			echo "Okay press go back";
+		}
+
+	render($smarty->assign('id', $id),
+		$smarty->assign('client', $client),
+		$smarty->assign('pagetitle', $pagetitle),
+		$smarty->display('client/delete.php'));
 }

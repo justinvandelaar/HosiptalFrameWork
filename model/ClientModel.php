@@ -42,18 +42,14 @@ function createClient($name, $adress, $age, $email, $pet_name)
 	header("Location:" . URL . "client/index");
 }
 
-function editClient($name, $species, $status, $gender, $id) {
+// Edit sql for the client 
+function editClient($name, $adress, $age, $email, $pet_name, $id) {
 	$db = openDatabaseConnection();
 
-	$sql = "UPDATE client SET name=':name', species=':species', status=':status', gender=':gender' WHERE id=:id";
+	$sql = "UPDATE client SET name='%s', adress='%s', age='%s', email='%s', pet_name='%s' WHERE id=%d";
+	$sql = sprintf($sql, $name, $adress, $age, $email, $pet_name, $id);
 	$query = $db->prepare($sql);
-	$query->execute(array(
-		':name' => $name,
-		':species' => $species,
-		':status' => $status,
-		':gender' => $gender,
-		':id' => $id
-		));
+	$query->execute();
 
 	$db = null;
 	header("Location:" . URL . "client/index");
