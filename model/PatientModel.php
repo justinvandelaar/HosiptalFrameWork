@@ -44,7 +44,7 @@ function createPatient($name, $species, $status, $gender)
 function editPatient($name, $species, $status, $gender, $id) {
 	$db = openDatabaseConnection();
 
-	$sql = "UPDATE patient SET name=':name', species=':species', status=':status', gender=':gender' WHERE id=:id";
+	$sql = "UPDATE patient SET name=:name, species=:species, status=:status, gender=:gender WHERE id=:id";
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':name' => $name,

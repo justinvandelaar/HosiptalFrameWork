@@ -8,7 +8,13 @@
 	Name: <br>
 	<input type="text" name="name"> <br>
 	Species: <br>
-	<input type="text" name="species"><br>
+	<select name="species">
+		{foreach $specie as $info}
+		{foreach $info as $species}
+		<option value="{$species['sort']}">{$species['sort']}</option>
+		{/foreach}
+		{/foreach}
+	</select> <br>
 	Status: <br>
 	<input type="text" name="status"><br>	
 	Gender:<br>

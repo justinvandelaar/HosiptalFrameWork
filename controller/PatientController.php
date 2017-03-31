@@ -1,5 +1,6 @@
 <?php
 require (ROOT . 'model/PatientModel.php');
+require (ROOT . 'model/SpecieModel.php');
 
 function index()
 {
@@ -15,6 +16,7 @@ function create() {
 	require (ROOT . 'inc/loadsmarty.php');
 
 	$pagetitle = 'Hosiptal';
+	$specie = array('specie' => getAllSpecies());
 
 	if (isset($_POST['submit'])) {
 	$name = $_POST['name'];
@@ -26,6 +28,7 @@ function create() {
 	}
 
 	render($smarty->assign('pagetitle', $pagetitle),
+		$smarty->assign('specie', $specie),
 		$smarty->display('patient/create.php'));
 }
 
@@ -33,6 +36,7 @@ function edit() {
 	require (ROOT . 'inc/loadsmarty.php');
 	$pagetitle = 'Hosiptal';
 	$id = $_GET['id'];
+	$specie = array('specie' => getAllSpecies());
 	$patient = getPatient($id);
 
 	if (isset($_POST['submit'])) {
@@ -51,6 +55,7 @@ function edit() {
 }
 	render($smarty->assign('files', $patient),
 		$smarty->assign('pagetitle', $pagetitle),
+		$smarty->assign('specie', $specie),
 		$smarty->display('patient/edit.php'));
 }
 
